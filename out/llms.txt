@@ -1,0 +1,26 @@
+# tsuev Parmar
+
+> Full-stack developer shipping production apps across web and mobile — React, Next.js and React Native on the frontend, Node.js, Express.js and Strapi on the backend. Open to new opportunities.
+
+Most recently built SaaS tooling at Deuex Solutions: a browser extension for the Collate platform, AI-powered features on top of LLM APIs, and a React Native app for real-time cricket scoring. Before that, owned frontend architecture for four production products at Retvens Technologies. 100+ open source commits to OpenMetadata. Based in Indore, India.
+
+## Links
+
+- Site: https://www.tsuevjs.com/
+- GitHub: https://github.com/tsuevjsx
+- LinkedIn: https://www.linkedin.com/in/tsuevjs/
+- Résumé: https://www.tsuevjs.com/tsuev_Parmar_Resume.pdf
+
+## Core stack
+
+React, Next.js, React Native, TypeScript, Redux, Tailwind, Node.js, Express.js, Strapi, MongoDB, GraphQL, OAuth 2.0, SQL.
+
+## Selected projects
+
+- **Collate Browser Extension** (Deuex Solutions, 2025) — a browser extension for the Collate SaaS platform, integrated with the same backend to surface insights directly on supported websites via content scripts. Contextual right-click menus and popups for real-time in-page data visualization; auth redesigned for premium vs. free tiers with role-based access control; LLM APIs integrated to prototype AI-powered features. Stack: React, Chrome Extensions, Content Scripts, LLM APIs.
+- **12thMen** (Deuex Solutions, 2025) — a React Native mobile app for real-time cricket scoring, developed and maintained alongside the Collate extension work. Stack: React Native, Real-time Data, Mobile.
+- **Hustle With Kai** (Freelance, 2025) — a full-featured e-commerce and blog platform built solo as sole engineer, from requirements through architecture to production launch, with comprehensive SEO optimization. Stack: Next.js, E-commerce, SEO, Blog Platform.
+
+## Open source
+
+100+ commits to OpenMetadata's core frontend, improving rendering performance for a global user base.

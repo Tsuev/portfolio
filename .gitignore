@@ -1,0 +1,19 @@
+# ─────────────────────────────────────────────────────────────────────
+#  Deploy-only repository (GitHub Pages project site:
+#  https://tsuev.github.io/portfolio/).
+#
+#  main contains ONLY the prebuilt static site (out/) and the Pages
+#  workflow (.github/). All Next.js source, configs and tooling live
+#  elsewhere and must never be committed here — so instead of listing
+#  exclusions we do the opposite: ignore EVERYTHING and re-include the
+#  few things this repo is meant to hold.
+# ─────────────────────────────────────────────────────────────────────
+
+/*
+
+# allowlist — the only content that belongs in this repo:
+!.gitignore
+!.github/
+!.github/**
+!/out/
+!/out/**

@@ -1,0 +1,48 @@
+# Deploys the prebuilt static site (out/) to GitHub Pages.
+#
+# This repository is a deploy target: main intentionally contains ONLY
+# out/ (the result of `npm run build:export`) plus this workflow — the
+# Next.js source is gitignored and never lands here. The Pages site is
+# therefore served from the committed build via the Pages artifact flow
+# (Settings → Pages → Source: "GitHub Actions").
+#
+# Update flow:  edit source → npm run build:export → commit out/ → push.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Pages deployment needs these scopes; contents is read-only because the
+# artifact comes from the checked-out commit, not a direct push.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time; cancel stale ones.
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Upload static build (out/)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # The whole prebuilt site lives in out/ (created by
+          # `npm run build:export` on the developer machine).
+          path: out
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
